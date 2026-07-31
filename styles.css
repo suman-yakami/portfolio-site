@@ -225,6 +225,7 @@ ul { list-style: none; }
   max-width: 520px;
   margin-bottom: 2rem;
   font-size: 1.05rem;
+  text-align: justify;
 }
 
 .hero-actions {
@@ -352,7 +353,7 @@ ul { list-style: none; }
 }
 
 .floating-card.card-1 {
-  bottom: 12%;
+  bottom: 35%;
   left: -8%;
   animation-delay: 0s;
 }
@@ -361,6 +362,12 @@ ul { list-style: none; }
   top: 14%;
   right: -6%;
   animation-delay: 1.5s;
+}
+
+.floating-card.card-3 {
+  bottom: 18%;
+  right: -3%;
+  animation-delay: 2.3s;
 }
 
 @keyframes float {

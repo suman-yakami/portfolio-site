@@ -586,6 +586,17 @@ section {
   overflow-wrap: break-word;
 }
 
+.timeline-company:has(+ .timeline-path) {
+  margin-bottom: 0.15rem;
+}
+
+.timeline-path {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 0.45rem;
+  line-height: 1.45;
+}
+
 .location-line {
   display: inline-flex;
   align-items: center;

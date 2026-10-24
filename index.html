@@ -17,14 +17,18 @@
 
   <nav class="nav" id="nav">
     <div class="container nav-inner">
-      <a href="#" class="logo">SY</a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
-      <div class="nav-links" id="navLinks">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
+      <div class="nav-left">
+        <a href="#" class="logo">SY</a>
+        <div class="nav-links" id="navLinks">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
+        </div>
+      </div>
+      <div class="nav-right">
         <a href="#contact" class="nav-cta">Get in Touch</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
       </div>
     </div>
   </nav>
@@ -69,19 +73,27 @@
       <div class="hero-visual">
         <div class="photo-glow"></div>
         <div class="photo-frame">
-          <img src="profile.jpg" alt="Suman Yakami — Lead Software QA Engineer" width="380" height="475" />
+          <img src="profile.png?v=2" alt="Suman Yakami — Lead Software QA Engineer" width="1185" height="1440" />
         </div>
-        <div class="floating-card card-1">
-          <strong>10+</strong>
-          <span>Years Experience</span>
-        </div>
-        <div class="floating-card card-2">
-          <strong>QA</strong>
-          <span>Automation Expert</span>
-        </div>
-        <div class="floating-card card-3">
-          <strong>AI</strong>
-          <span>Practitioner</span>
+        <div class="hero-stack">
+          <div class="hero-stack-item">
+            <span class="hero-stack-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>
+            </span>
+            <span>10+ years</span>
+          </div>
+          <div class="hero-stack-item">
+            <span class="hero-stack-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="m8.5 12 2.2 2.2 4.8-4.8"/></svg>
+            </span>
+            <span>QA automation</span>
+          </div>
+          <div class="hero-stack-item">
+            <span class="hero-stack-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3.5 13.6 8 18.2 9.5 13.6 11 12 15.5 10.4 11 5.8 9.5 10.4 8Z"/><path d="M18 14.5 18.7 16.3 18.8 16.5 20.5 17.2 18.7 17.9 18 19.7 17.3 17.9 15.5 17.2 17.3 16.5Z"/></svg>
+            </span>
+            <span>AI practitioner</span>
+          </div>
         </div>
       </div>
     </div>
@@ -138,12 +150,21 @@
       <div class="timeline">
         <article class="timeline-item">
           <div class="timeline-card">
+            <div class="timeline-logo-stage">
+              <img class="timeline-logo-wash" src="logos/cedargate.png" alt="" aria-hidden="true" />
+              <img class="timeline-logo" src="logos/cedargate.png" alt="" width="140" height="64" />
+            </div>
+            <div class="timeline-body">
             <div class="timeline-meta">
               <h3>Lead Software QA Engineer</h3>
               <span class="timeline-date">Jun 2024 – Present</span>
             </div>
-            <p class="timeline-company">Cedar Gate Services Pvt. Ltd., an IQVIA business</p>
-            <p class="timeline-path">Senior Software QA Automation Engineer → Lead Software QA Engineer</p>
+            <div class="timeline-brand">
+              <div>
+                <p class="timeline-company">Cedar Gate Services Pvt. Ltd., an IQVIA business</p>
+                <p class="timeline-path">Senior Software QA Automation Engineer → Lead Software QA Engineer</p>
+              </div>
+            </div>
             <p class="location-line">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
               <span>Sanepa, Lalitpur</span>
@@ -153,16 +174,24 @@
               <li>Enhance, test, and deploy the framework across all product teams, and help those teams use it.</li>
               <li>Earlier in this role, guided product automation teams on Katalon Studio and TestOps — code standards, best practices, shared custom keywords, issue resolution with Katalon Support, automation servers, TestOps agents, and licenses.</li>
             </ul>
+            </div>
           </div>
         </article>
 
         <article class="timeline-item">
           <div class="timeline-card">
+            <div class="timeline-logo-stage">
+              <img class="timeline-logo-wash" src="logos/uba-solutions.jpeg" alt="" aria-hidden="true" />
+              <img class="timeline-logo" src="logos/uba-solutions.jpeg" alt="" width="140" height="64" />
+            </div>
+            <div class="timeline-body">
             <div class="timeline-meta">
               <h3>Software Development Engineer in Test – II</h3>
               <span class="timeline-date">Jun 2022 – Nov 2023</span>
             </div>
-            <p class="timeline-company">UBA Solutions Pvt. Ltd. (A Monotype Partner Company)</p>
+            <div class="timeline-brand">
+              <p class="timeline-company">UBA Solutions Pvt. Ltd. (A Monotype Partner Company)</p>
+            </div>
             <p class="location-line">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
               <span>Imadole, Lalitpur</span>
@@ -172,16 +201,24 @@
               <li>Planned and ran user acceptance testing to make sure releases met real business needs.</li>
               <li>Built automated tests with AccelQ and Selenium/Python, connected to Jenkins so they ran on every build.</li>
             </ul>
+            </div>
           </div>
         </article>
 
         <article class="timeline-item">
           <div class="timeline-card">
+            <div class="timeline-logo-stage">
+              <img class="timeline-logo-wash" src="logos/verisk.png" alt="" aria-hidden="true" />
+              <img class="timeline-logo" src="logos/verisk.png" alt="" width="140" height="64" />
+            </div>
+            <div class="timeline-body">
             <div class="timeline-meta">
               <h3>Software Engineer</h3>
               <span class="timeline-date">Apr 2019 – Jun 2022</span>
             </div>
-            <p class="timeline-company">Verisk Nepal Pvt. Ltd.</p>
+            <div class="timeline-brand">
+              <p class="timeline-company">Verisk Nepal Pvt. Ltd.</p>
+            </div>
             <p class="location-line">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
               <span>Pulchowk, Lalitpur</span>
@@ -192,17 +229,27 @@
               <li>Built automated regression and load tests for APIs to catch issues before they reached production.</li>
               <li>Connected automated tests to the Bamboo CI/CD pipeline so bugs were found early in every release.</li>
             </ul>
+            </div>
           </div>
         </article>
 
         <article class="timeline-item">
           <div class="timeline-card">
+            <div class="timeline-logo-stage quiet-wash">
+              <img class="timeline-logo-wash" src="logos/techtonne.png" alt="" aria-hidden="true" />
+              <img class="timeline-logo" src="logos/techtonne.png" alt="" width="140" height="64" />
+            </div>
+            <div class="timeline-body">
             <div class="timeline-meta">
               <h3>Software Engineer</h3>
               <span class="timeline-date">Jan 2017 – Apr 2019</span>
             </div>
-            <p class="timeline-company">Techtonne Solution Pvt. Ltd. (Subsidiary of Braindigit IT Solution)</p>
-            <p class="timeline-path">Trainee → Associate → Software Engineer</p>
+            <div class="timeline-brand">
+              <div>
+                <p class="timeline-company">Techtonne Solution Pvt. Ltd. (Subsidiary of Braindigit IT Solution)</p>
+                <p class="timeline-path">Trainee → Associate → Software Engineer</p>
+              </div>
+            </div>
             <p class="location-line">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
               <span>Gyaneshwor, Kathmandu</span>
@@ -212,16 +259,24 @@
               <li>Handled database work too — writing queries, stored procedures, views, and triggers in MS-SQL.</li>
               <li>Deployed applications and kept them running smoothly in production.</li>
             </ul>
+            </div>
           </div>
         </article>
 
         <article class="timeline-item">
           <div class="timeline-card">
+            <div class="timeline-logo-stage">
+              <img class="timeline-logo-wash" src="logos/mdev-solutions.jpeg" alt="" aria-hidden="true" />
+              <img class="timeline-logo" src="logos/mdev-solutions.jpeg" alt="" width="140" height="64" />
+            </div>
+            <div class="timeline-body">
             <div class="timeline-meta">
               <h3>Junior Developer</h3>
               <span class="timeline-date">Dec 2015 – Jul 2016</span>
             </div>
-            <p class="timeline-company">mDev Solutions Pvt. Ltd.</p>
+            <div class="timeline-brand">
+              <p class="timeline-company">mDev Solutions Pvt. Ltd.</p>
+            </div>
             <p class="location-line">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
               <span>Baluwatar, Kathmandu</span>
@@ -231,6 +286,7 @@
               <li>Wrote clean, efficient MySQL queries to keep applications fast and reliable.</li>
               <li>Got my start in software development, learning how to turn requirements into working code.</li>
             </ul>
+            </div>
           </div>
         </article>
       </div>

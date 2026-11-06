@@ -413,6 +413,7 @@
           Whether you're looking for a QA automation lead, a mentor for your testing team,
           or a collaborator on your next project — I'd love to hear from you.
         </p>
+        <div class="contact-layout">
         <ul class="contact-list">
           <li>
             <span class="contact-icon" aria-hidden="true">
@@ -464,6 +465,32 @@
             </div>
           </li>
         </ul>
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="contact-form-head">
+            <h3>Send a message</h3>
+            <button type="submit" class="contact-send">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2 11 13"/><path d="m22 2-7 20-4-9-9-4 20-7z"/></svg>
+              <span>Send</span>
+            </button>
+          </div>
+          <div class="field">
+            <label for="contactName">Name</label>
+            <input id="contactName" name="name" type="text" autocomplete="name" required />
+            <p class="field-error" id="contactNameError" hidden></p>
+          </div>
+          <div class="field">
+            <label for="contactEmail">Email</label>
+            <input id="contactEmail" name="email" type="email" autocomplete="email" required />
+            <p class="field-error" id="contactEmailError" hidden></p>
+          </div>
+          <div class="field">
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" name="message" rows="5" required></textarea>
+            <p class="field-error" id="contactMessageError" hidden></p>
+          </div>
+          <p class="form-note" id="formNote" hidden></p>
+        </form>
+        </div>
       </div>
     </div>
   </section>
@@ -520,6 +547,41 @@
     );
 
     sections.forEach((section) => sectionObserver.observe(section));
+
+    const contactForm = document.getElementById("contactForm");
+    const formNote = document.getElementById("formNote");
+
+    function setFieldError(input, errorEl, message) {
+      const invalid = Boolean(message);
+      input.setAttribute("aria-invalid", invalid ? "true" : "false");
+      input.setAttribute("aria-describedby", errorEl.id);
+      errorEl.hidden = !invalid;
+      errorEl.textContent = message;
+    }
+
+    contactForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const name = contactForm.name.value.trim();
+      const email = contactForm.email.value.trim();
+      const message = contactForm.message.value.trim();
+      const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+      setFieldError(contactForm.name, document.getElementById("contactNameError"), name ? "" : "Please enter your name.");
+      setFieldError(contactForm.email, document.getElementById("contactEmailError"), emailOk ? "" : "Please enter a valid email.");
+      setFieldError(contactForm.message, document.getElementById("contactMessageError"), message ? "" : "Please write a message.");
+
+      if (!name || !emailOk || !message) {
+        formNote.hidden = true;
+        return;
+      }
+
+      const subject = encodeURIComponent(`Portfolio message from ${name}`);
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+      window.location.href = `mailto:suman.yakami@gmail.com?subject=${subject}&body=${body}`;
+      formNote.hidden = false;
+      formNote.classList.remove("is-error");
+      formNote.textContent = "Your email app should open with this message ready to send.";
+    });
   </script>
 </body>
 </html>
